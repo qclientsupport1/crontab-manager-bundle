@@ -1,5 +1,5 @@
 {
-    "name": "acrnogor/crontab-manager-bundle",
+    "name": "q-agency/crontab-manager-bundle",
     "description": "Crontab Manager bundle for SF 3.4.x and 4.x projects",
     "type": "library",
     "license": "MIT",
@@ -23,7 +23,7 @@
     ],
     "require": {
         "php": "^7.1.3",
-        "q-alliance/crontab-manager": "dev-main",
+        "q-agency/crontab-manager": "dev-main",
         "symfony/console": ">3.4"
     },
     "require-dev": {
