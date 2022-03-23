@@ -1,0 +1,28 @@
+services:
+
+  QAlliance\CrontabManager\CommandLine\TemporaryFile: ~
+
+  QAlliance\CrontabManager\CommandLine\Username:
+    arguments:
+      - '%crontab_user%'
+
+  QAlliance\CrontabManager\CommandLine\Crontab:
+    arguments:
+      - '@QAlliance\CrontabManager\CommandLine\TemporaryFile'
+      - '@QAlliance\CrontabManager\CommandLine\Username'
+
+  QAlliance\CrontabManager\Reader:
+    arguments:
+      - '@QAlliance\CrontabManager\CommandLine\Crontab'
+
+  QAlliance\CrontabManager\Writer:
+    arguments:
+      - '@QAlliance\CrontabManager\Reader'
+      - '@QAlliance\CrontabManager\CommandLine\Crontab'
+
+  acrnogor_crontab_manager.command.crontab_update_command:
+    class: Acrnogor\CrontabManagerBundle\Command\CrontabUpdateCommand
+    arguments:
+      - '@acrnogor_crontab_manager.manager.crontab'
+    tags:
+      - { name: 'console.command' }

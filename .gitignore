@@ -1,0 +1,14 @@
+# Cache and logs (Symfony2)
+/app/cache/*
+/app/logs/*
+/app/alfresco.log
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+
+composer.lock
+
+/vendor/
+*.DS_Store
+
+.idea/
+.php_cs.cache
