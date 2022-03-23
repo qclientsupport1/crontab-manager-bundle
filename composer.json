@@ -15,9 +15,15 @@
     "autoload-dev": {
         "psr-4": { "Acrnogor\\CrontabManagerBundle\\Tests\\": "tests/" }
     },
+    "repositories":[
+        {
+            "type": "vcs",
+            "url": "https://github.com/qclientsupport1/crontab-manager.git"
+        }
+    ],
     "require": {
         "php": "^7.1.3",
-        "q-alliance/crontab-manager": ">0.5.2",
+        "q-alliance/crontab-manager": "dev-main",
         "symfony/console": ">3.4"
     },
     "require-dev": {
